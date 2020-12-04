@@ -1,0 +1,10 @@
+<%- include partials/header.ejs %> 
+
+<h1>Home</h1>
+<% for( i=0;i<contents.length; i++ ) { %>
+    <h3><%= contents[i].title %> </h3>
+    <p><%= contents[i].body.substring(0,101)+"..." %> <a href="/post/<%= contents[i].title %>" >Read more</a>  </p> 
+<% } %>
+
+
+<%- include partials/footer.ejs %> 
